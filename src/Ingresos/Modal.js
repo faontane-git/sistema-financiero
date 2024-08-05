@@ -1,13 +1,11 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ children, onClose }) => {
+const Modal = ({ onClose, children }) => {
   return (
     <div className="modal-overlay">
-      <div className="modal">
-        <button className="close-button" onClick={onClose}>
-          &times;
-        </button>
+      <div className="modal-content">
+        <button className="close-button" onClick={onClose}>&times;</button>
         {children}
       </div>
     </div>
