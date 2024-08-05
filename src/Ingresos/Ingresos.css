@@ -1,0 +1,58 @@
+.ingresos-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .new-entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .new-entry-form input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .new-entry-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .new-entry-form button:hover {
+    background-color: #45a049;
+  }
+  
