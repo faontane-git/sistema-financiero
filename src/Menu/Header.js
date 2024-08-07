@@ -1,9 +1,12 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ handleDrawerToggle }) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const navigate = useNavigate();
 
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
@@ -11,13 +14,23 @@ const Header = () => {
 
     const handleClose = () => {
         setAnchorEl(null);
+        navigate("/");
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, background: '#34495e' }}>
             <Toolbar>
+                <IconButton
+                    edge="start"
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerToggle}
+                    sx={{ marginRight: 2 }}
+                >
+                    <MenuIcon />
+                </IconButton>
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    Financial Management System
+                    Kakebo
                 </Typography>
                 <div>
                     <IconButton
